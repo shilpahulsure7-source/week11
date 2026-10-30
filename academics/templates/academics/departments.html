@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VJIT Departments</title>
+</head>
+
+<body>
+
+    <h1>Academic Departments</h1>
+
+    {% for department in departments %}
+
+        <h2>{{ department.name }}</h2>
+
+        <p>HOD: {{ department.hod }}</p>
+
+        <p>{{ department.description }}</p>
+
+        <p>Email: {{ department.contact_email }}</p>
+
+        <hr>
+
+    {% empty %}
+
+        <p>No departments added yet.</p>
+
+    {% endfor %}
+
+    <a href="/">Back to Home</a>
+
+</body>
+</html>
